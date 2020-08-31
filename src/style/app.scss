@@ -1,0 +1,145 @@
+:root,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.container {
+  display: inline-block;
+  top: 0;
+  left: 0;
+  width: 80%;
+
+  text-align: center;
+  box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.568);
+  h1 {
+    animation: moveleft 1.2s ease;
+  }
+  background-color: aliceblue;
+}
+
+.table-content {
+  width: 100%;
+  border-collapse: collapse;
+  thead {
+    background-color: aquamarine;
+    border-bottom: 1px solid rgb(185, 163, 163);
+  }
+  th,
+  td {
+    padding: 20px 10px;
+    border-bottom: 1px solid rgb(56, 51, 51);
+  }
+}
+.btn {
+  width: 7rem;
+  height: 2rem;
+  background-color: rgb(68, 68, 245);
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  border-style: transparent;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fade 1s ease-in-out;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    transform: translateY(-0.1rem) scale(1.05);
+  }
+}
+.primary {
+  background-color: orange;
+}
+
+.form {
+  display: inline-block;
+  height: 8rem;
+  width: 22rem;
+  background-image: linear-gradient(0, rgb(208, 208, 255), rgb(190, 203, 240));
+  box-shadow: 3px 2px 5px rgba(134, 134, 134, 0.8);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  form {
+    padding: 1rem;
+  }
+  h3 {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  &-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+
+    label {
+      text-transform: uppercase;
+    }
+    &__input {
+      border: none;
+      height: 1.3rem;
+      font-size: 1rem;
+      border-radius: 0.2rem;
+      box-shadow: 3px 3px 2px rgba(110, 103, 103, 0.8);
+    }
+    &__input:focus {
+      outline: none;
+    }
+  }
+}
+
+@keyframes moveleft {
+  0% {
+    transform: translateX(-50rem);
+  }
+}
+
+.modalsection {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(34, 29, 29, 0.2);
+  width: 100vmax;
+  height: 100vh;
+  transition: all 1s ease;
+
+  form {
+    background-color: rgb(48, 241, 225);
+    box-shadow: 3px 3px 2px rgba(110, 103, 103, 0.8);
+    width: 30rem;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 1rem;
+    label {
+      margin-right: 1rem;
+    }
+  }
+}
+.btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.plus {
+  margin-bottom: 2rem;
+}
